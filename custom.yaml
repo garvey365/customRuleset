@@ -1,0 +1,21 @@
+# NAME: custom
+# AUTHOR: garvey365
+# REPO: https://github.com/garvey365/customRuleset
+# UPDATED: 2025-04-27 14:05:31
+# DOMAIN: 8
+# DOMAIN-KEYWORD: 1
+# DOMAIN-SUFFIX: 24
+# IP-ASN: 1
+# IP-CIDR: 2
+# TOTAL: 36
+
+payload:
+  # 直连
+  - DOMAIN,www.gying.si
+  - DOMAIN,vip.ffzy-video.com
+  - DOMAIN-SUFFIX,deepseek.com
+  - DOMAIN,i.mi.com
+  - DOMAIN,c1.rrcdnbf5.com
+  - DOMAIN,www.meijutt.tv
+  - DOMAIN-SUFFIX,postgres.cn
+  - DOMAIN-SUFFIX,jetbrains.com
