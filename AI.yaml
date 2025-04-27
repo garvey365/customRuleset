@@ -1,0 +1,33 @@
+  payload:
+    #ChatGPT及其他AI
+    - DOMAIN-KEYWORD,openai
+    - DOMAIN-KEYWORD,chatgpt
+    - DOMAIN-SUFFIX,chatgpt.com
+    - DOMAIN-SUFFIX,openai.com
+    - DOMAIN-SUFFIX,oaistatic.com
+    - DOMAIN-SUFFIX,oaiusercontent.com
+    - DOMAIN-SUFFIX,auth0.com
+    - DOMAIN-SUFFIX,bing.com
+    - DOMAIN-SUFFIX,live.com
+    - DOMAIN-SUFFIX,ai.com
+    - DOMAIN-SUFFIX,deepl.com
+    - DOMAIN-SUFFIX,sentry.io
+    - DOMAIN-SUFFIX,challenges.cloudflare.com
+    - DOMAIN-SUFFIX,events.statsigapi.net
+    - DOMAIN-SUFFIX,featuregates.org
+    - DOMAIN-SUFFIX,identrust.com
+    - DOMAIN-SUFFIX,intercom.io
+    - DOMAIN-SUFFIX,intercomcdn.com
+    # 内容：新必应与Edge边栏解锁
+    - DOMAIN,edgeservices.bing.com
+    - DOMAIN,www.bing.com
+    - DOMAIN,assets.msn.cn
+    - DOMAIN-SUFFIX,bing.net
+    - DOMAIN,sydney.bing.com
+    - DOMAIN-KEYWORD,bing.com
+    - DOMAIN-SUFFIX,bingapis.com
+    - DOMAIN,functional.events.data.microsoft.com
+    - DOMAIN-SUFFIX,claude.ai
+    - DOMAIN-SUFFIX,anthropic.com
+    - DOMAIN,bard.google.com
+    - DOMAIN,gemini.google.com
