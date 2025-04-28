@@ -19,3 +19,4 @@ payload:
   - DOMAIN,www.meijutt.tv
   - DOMAIN-SUFFIX,postgres.cn
   - DOMAIN-SUFFIX,jetbrains.com
+  - DOMAIN-SUFFIX,myqcloud.com
