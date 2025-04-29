@@ -2,3 +2,4 @@ payload:
   # 分流
   - DOMAIN-SUFFIX,stytch.com
   - DOMAIN-SUFFIX,groq.com
+  - DOMAIN-SUFFIX,openrouter.ai
