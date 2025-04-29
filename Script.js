@@ -51,6 +51,28 @@ const ruleProviderCommon = {
   "format": "yaml",
   "interval": 86400
 };
+const customRuleProviders = {
+  "CustomRules": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://github.com/garvey365/customRuleset/blob/main/custom.yaml",
+    "path": "ruleset/customRuleset/custom.yaml"
+  },
+  "OtherCustom": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://github.com/garvey365/customRuleset/blob/main/other.yaml",
+    "path": "ruleset/customRuleset/other.yaml"
+  },
+  "AI": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://github.com/garvey365/customRuleset/blob/main/AI.yaml",
+    "path": "ruleset/customRuleset/AI.yaml"
+
+  }
+  ,
+}
 const ruleADtesting = {
 
   // "AD": {
@@ -99,6 +121,9 @@ const ruleADtesting = {
 };
 // 规则集配置
 const ruleProviders = {
+  
+  ...customRuleProviders,
+
   "reject": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -182,31 +207,18 @@ const ruleProviders = {
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml",
     "path": "./ruleset/blackmatrix7/openai.yaml"
-  },
-  "CustomRules": {
-    ...ruleProviderCommon,
-    "behavior": "classical",
-    "url": "https://github.com/garvey365/customRuleset/blob/main/custom.yaml",
-    "path": "ruleset/customRuleset/custom.yaml"
-  },
-  "OtherCustom": {
-    ...ruleProviderCommon,
-    "behavior": "classical",
-    "url": "https://github.com/garvey365/customRuleset/blob/main/other.yaml",
-    "path": "ruleset/customRuleset/other.yaml"
-  },
-  "AI": {
-    ...ruleProviderCommon,
-    "behavior": "classical",
-    "url": "https://github.com/garvey365/customRuleset/blob/main/AI.yaml",
-    "path": "ruleset/customRuleset/AI.yaml"
-
   }
-  ,
-  ...ruleADtesting
 };
+
+const customRulesConfig = [
+    //自定义规则集
+    "RULE-SET,CustomRules,全局直连,no-resolve",
+    "RULE-SET,OtherCustom,Taiwan",
+    "RULE-SET,AI,AI"
+]
 // 规则
 const rules = [
+  ...customRulesConfig,
   // 自定义规则
   "DOMAIN-SUFFIX,googleapis.cn,节点选择", // Google服务
   "DOMAIN-SUFFIX,gstatic.com,节点选择", // Google静态资源
@@ -229,10 +241,6 @@ const rules = [
   "RULE-SET,lancidr,全局直连,no-resolve",
   "RULE-SET,cncidr,全局直连,no-resolve",
   "RULE-SET,telegramcidr,电报消息,no-resolve",
-  //自定义规则集
-  "RULE-SET,CustomRules,全局直连,no-resolve",
-  "RULE-SET,OtherCustom,Taiwan",
-  "RULE-SET,AI,AI",
   //ruleADtesting 测试广告过滤 配置 (如影响体验则可取消当前配置)
   // "RULE-SET,AD,REJECT",
   // "RULE-SET,EasyList,REJECT",
