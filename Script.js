@@ -55,21 +55,20 @@ const customRuleProviders = {
   "CustomRules": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/b989305905b50d3e424a7c7e87b40c46170e2860/custom.yaml",
+    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/custom.yaml",
     "path": "ruleset/customRuleset/custom.yaml"
   },
   "OtherCustom": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/b989305905b50d3e424a7c7e87b40c46170e2860/other.yaml",
+    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/other.yaml",
     "path": "ruleset/customRuleset/other.yaml"
   },
   "AI": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/b989305905b50d3e424a7c7e87b40c46170e2860/AI.yaml",
-    "path": "ruleset/customRuleset/AI.yaml"
-
+    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/AI.yaml",
+    "path": "ruleset/customRuleset/AI.yaml"  
   }
 };
 
@@ -167,7 +166,7 @@ const ruleProviders = {
 const customRulesConfig = [
   //自定义规则集
   "RULE-SET,CustomRules,全局直连,no-resolve",
-  "RULE-SET,OtherCustom,Taiwan",
+  "RULE-SET,OtherCustom,AllOften",
   "RULE-SET,AI,AI"
 ];
 // 规则
@@ -215,6 +214,7 @@ const extendBaseOption = {
   "lazy": true,
   "hidden": true
 };
+
 // 程序入口
 function main(config) {
   const proxyCount = config?.proxies?.length ?? 0;
@@ -226,13 +226,15 @@ function main(config) {
   // 覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
 
+  // Auto_Group
+  const autoGroup = ["HongKong_Auto","Taiwan_Auto","Japan_Auto","USA_Auto","SGP_Auto"]
   // 覆盖原配置中的代理组
   config["proxy-groups"] = [
     {
       ...groupBaseOption,
       "name": "节点选择",
       "type": "select",
-      "proxies": ["延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
+      "proxies": ["延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)",...autoGroup],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
     },
@@ -342,8 +344,8 @@ function main(config) {
       ...groupBaseOption,
       "name": "漏网之鱼",
       "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
-      // "include-all": true,
+      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连",...autoGroup],
+      "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"
     },
     {
@@ -445,8 +447,8 @@ function main(config) {
       ...groupBaseOption,
       "name": "AllOften",
       "type": "select",
-      "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移"],
-      "include-all": true,
+      "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移",...autoGroup],
+      "include-all": false,
       // "exclude-type": "direct",
       "filter": "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
     }
