@@ -1,14 +1,3 @@
-# NAME: custom
-# AUTHOR: garvey365
-# REPO: https://github.com/garvey365/customRuleset
-# UPDATED: 2025-04-27 14:05:31
-# DOMAIN: 6
-# DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 2
-# IP-ASN: 0
-# IP-CIDR: 0
-# TOTAL: 8
-
 payload:
   # 直连
   - DOMAIN,www.gying.si

@@ -55,19 +55,19 @@ const customRuleProviders = {
   "CustomRules": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://github.com/garvey365/customRuleset/blob/main/custom.yaml",
+    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/b989305905b50d3e424a7c7e87b40c46170e2860/custom.yaml",
     "path": "ruleset/customRuleset/custom.yaml"
   },
   "OtherCustom": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://github.com/garvey365/customRuleset/blob/main/other.yaml",
+    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/b989305905b50d3e424a7c7e87b40c46170e2860/other.yaml",
     "path": "ruleset/customRuleset/other.yaml"
   },
   "AI": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://github.com/garvey365/customRuleset/blob/main/AI.yaml",
+    "url": "https://gist.githubusercontent.com/garvey365/93912800122c56278d95f0824be0a4ae/raw/b989305905b50d3e424a7c7e87b40c46170e2860/AI.yaml",
     "path": "ruleset/customRuleset/AI.yaml"
 
   }

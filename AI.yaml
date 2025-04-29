@@ -31,3 +31,5 @@
     - DOMAIN-SUFFIX,anthropic.com
     - DOMAIN,bard.google.com
     - DOMAIN,gemini.google.com
+    - DOMAIN-SUFFIX,stytch.com
+    - DOMAIN-SUFFIX,groq.com
