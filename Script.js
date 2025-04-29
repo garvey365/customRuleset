@@ -71,57 +71,11 @@ const customRuleProviders = {
     "path": "ruleset/customRuleset/AI.yaml"
 
   }
-  ,
-}
-const ruleADtesting = {
-
-  // "AD": {
-  //   "type": "http",
-  //   "behavior": "domain",
-  //   "url": "https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml",
-  //   "path": "./ruleset/adrule/AD.yaml",
-  //   "interval": 86400
-  // },
-  // "EasyList": {
-  //   "type": "http",
-  //   "behavior": "domain",
-  //   "url": "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml",
-  //   "path": "./ruleset/adrule/EasyList.yaml",
-  //   "interval": 86400
-  // },
-  // "EasyListChina": {
-  //   "type": "http",
-  //   "behavior": "domain",
-  //   "url": "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml",
-  //   "path": "./ruleset/adrule/EasyListChina.yaml",
-  //   "interval": 86400
-  // },
-  // "EasyPrivacy": {
-  //   "type": "http",
-  //   "behavior": "domain",
-  //   "url": "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml",
-  //   "path": "./ruleset/adrule/EasyPrivacy.yaml",
-  //   "interval": 86400
-  // },
-  // "ProgramAD": {
-  //   "type": "http",
-  //   "behavior": "domain",
-  //   "url": "https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml",
-  //   "path": "./ruleset/adrule/ProgramAD.yaml",
-  //   "interval": 86400
-  // },
-  // "adblock": {
-  //   "type": "file",
-  //   "behavior": "domain",
-  //   "format": "mrs",
-  //   "path": "./ruleset/adrule/adblock_reject.mrs"
-  // }
-
-
 };
+
 // 规则集配置
 const ruleProviders = {
-  
+
   ...customRuleProviders,
 
   "reject": {
@@ -211,11 +165,11 @@ const ruleProviders = {
 };
 
 const customRulesConfig = [
-    //自定义规则集
-    "RULE-SET,CustomRules,全局直连,no-resolve",
-    "RULE-SET,OtherCustom,Taiwan",
-    "RULE-SET,AI,AI"
-]
+  //自定义规则集
+  "RULE-SET,CustomRules,全局直连,no-resolve",
+  "RULE-SET,OtherCustom,Taiwan",
+  "RULE-SET,AI,AI"
+];
 // 规则
 const rules = [
   ...customRulesConfig,
@@ -241,13 +195,6 @@ const rules = [
   "RULE-SET,lancidr,全局直连,no-resolve",
   "RULE-SET,cncidr,全局直连,no-resolve",
   "RULE-SET,telegramcidr,电报消息,no-resolve",
-  //ruleADtesting 测试广告过滤 配置 (如影响体验则可取消当前配置)
-  // "RULE-SET,AD,REJECT",
-  // "RULE-SET,EasyList,REJECT",
-  // "RULE-SET,EasyListChina,REJECT",
-  // "RULE-SET,EasyPrivacy,REJECT",
-  // "RULE-SET,ProgramAD,REJECT",
-  // "RULE-SET,adblock,REJECT",
   // 其他规则
   "GEOIP,LAN,全局直连,no-resolve",
   "GEOIP,CN,全局直连,no-resolve",
@@ -278,7 +225,7 @@ function main(config) {
   }
   // 覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
-  
+
   // 覆盖原配置中的代理组
   config["proxy-groups"] = [
     {
