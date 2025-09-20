@@ -9,3 +9,9 @@ payload:
   - DOMAIN-SUFFIX,postgres.cn
   - DOMAIN-SUFFIX,jetbrains.com
   - DOMAIN-SUFFIX,myqcloud.com
+  - DOMAIN,gdmf.apple.com
+  - DOMAIN,gdmf.ados.apple.com
+  - DOMAIN,mesu.apple.com
+  - DOMAIN,configuration.ls.apple.com
+  - DOMAIN,api.ip.sb
+  - DOMAIN,stocks-data-service.apple.com
